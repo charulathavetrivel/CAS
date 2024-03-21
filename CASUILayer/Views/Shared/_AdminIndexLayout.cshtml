@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CAS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/BackButtonDisable")
+
+    <style>
+        .role-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .role-container > div {
+                margin-right: 50px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+                .role-container > div:last-child {
+                    margin-right: 0;
+                }
+
+                .role-container > div:hover {
+                    transform: scale(1.1);
+                }
+
+            .role-container img {
+                width: 150px;
+                height: 150px;
+            }
+
+            .role-container a {
+                display: block;
+                background-color: #636381;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 20px;
+                text-align: center;
+                transition: background-color 0.3s ease-in-out;
+            }
+
+                .role-container a:hover {
+                    background-color: #0000CD;
+                }
+
+        .navbar-custom {
+            background-color: #073479;
+        }
+
+        .navbar-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .navbar-logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .navbar-text {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        body {
+            background-image: url('/Scripts/images/backA.jpeg');
+            background-size: cover;
+            background-color: #F3EBF6;
+            font-family: 'Ubuntu', sans-serif;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-logo">
+                    <img src="~/Scripts/icons/logo3.png" alt="Logo">
+                </div>
+                <div class="navbar-text">
+                    Clinical Automation System
+                </div>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">@Html.ActionLink("Edit Profile", "ProfileChange", "Admins", new { area = "" }, new { @class = "btn btn-primary" })</li>
+                    &nbsp;&nbsp;
+                    <li class="nav-item">@Html.ActionLink("Logout", "LogOut", "Home", new { area = "" }, new { @class = "btn btn-danger" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

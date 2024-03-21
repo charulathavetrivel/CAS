@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "PatientList";
+    Layout = "~/Views/Shared/_AdminIndexLayout.cshtml";
+}
+
+@Styles.Render("~/Content/css/AdminIndexStyle")
+
+<div style="text-align: center; margin-top: 50px;">
+    <div class="role-container">
+        <div>
+            <a href="@Url.Action("PatientList")">
+                <img src="~/Scripts/icons/PATA.jpeg" alt="Patients">
+            </a>
+            <a href="@Url.Action("PatientList")">Patients</a>
+        </div>
+
+        <div>
+            <a href="@Url.Action("DoctorList")">
+                <img src="~/Scripts/icons/DA.jpeg" alt="Doctor">
+            </a>
+            <a href="@Url.Action("DoctorList")">Doctors</a>
+        </div>
+    </div>
+
+    <div class="role-container">
+        <div>
+            <a href="@Url.Action("PharmacistList")">
+                <img src="~/Scripts/icons/PA.jpeg" alt="Pharmacist">
+            </a>
+            <a href="@Url.Action("PharmacistList")">Pharmacist</a>
+        </div>
+
+        <div>
+            <a href="@Url.Action("FrontExecutiveList")">
+                <img src="~/Scripts/icons/FA.jpeg" alt="Front Office Executive">
+            </a>
+            <a href="@Url.Action("FrontExecutiveList")">Front Office Executive</a>
+        </div>
+    </div>
+</div>
